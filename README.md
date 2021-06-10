@@ -73,13 +73,13 @@ If `-pb` is not specify, it will generate all possible outcome. Proceed with cau
 **Note:** `-pb` accept list of state abbrevations and list of PB codes (comma seperated). Mixed of state abbrevation and PB code is not allowed.
 
 ### The Ninth Digit (N)
-Usually, a person born prior and in the year 1999 will have the number started with 5## or 6## or 7## while a person born after and in the year 2000 will have the number started with 0##. This tool default will generate all possible digit (5,6,7,0) regardless of the year. Use `-n` arguement to overwrite this behaviour.
+Usually, a person born prior and in the year 1999 will have the number started with 5### or 6### or 7### while a person born after and in the year 2000 will have the number started with 0###. This tool default will generate all possible digit (5,6,7,0) regardless of the year. Use `-n` arguement to overwrite this behaviour.
 **Note:** `-n` accept list of 1-digit integeter (comma seperated).
 
 ### Gender (G)
 G, the last digit of the IC represents the gender of the person.
-Odd numbers (1,3,5,7,9) denote male
-Even numbers (2,4,6,9,0) denote female
+Odd numbers (1,3,5,7,9) denote male.
+Even numbers (2,4,6,9,0) denote female.
 This tool generate all possible digit (0-9) by default. Use `-g` argument to overwrite this behaviour. 
 
 ### Source
