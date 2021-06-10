@@ -8,6 +8,9 @@ cd Malaysia-IC-Generator
 python IC_generator_tool.py --help
 ```
 
+## Note
+Your editor may unable to open the output file if it is too large. Try [UltraEdit](https://www.ultraedit.com/)
+
 ## Usage 
 ### Basic Usage:
 ```
@@ -81,3 +84,6 @@ This tool generate all possible digit (0-9) by default. Use `-g` argument to ove
 
 ### Source
 https://en.wikipedia.org/wiki/Malaysian_identity_card
+
+# Disclaimer
+All the information provided on this repo are for educational purposes only. The repo and author of the repo is no way responsible for any misuse of the information.
