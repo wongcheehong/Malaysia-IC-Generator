@@ -10,20 +10,34 @@ python IC_generator_tool.py --help
 
 ## Usage 
 ### Basic Usage:
-`python IC_generator_tool.py -s STARTYEAR -e ENDYEAR [-pb] <PLACEBIRTH> [-n] <0-9> [-g] <F,M>`
+```
+python IC_generator_tool.py -s STARTYEAR -e ENDYEAR [-pb] <PLACEBIRTH> [-n] <0-9> [-g] <F,M>
+```
 ### Help
-`python IC_generator_tool.py -h`
+```
+python IC_generator_tool.py -h
+```
 ![image](https://user-images.githubusercontent.com/11075969/121502714-01e66d80-ca13-11eb-9564-6612fa3975d6.png)
 ### Example 1: Generate IC from 1990 to 2001:
-`python IC_generator_tool.py -s 1990 -e 2001`
+```
+python IC_generator_tool.py -s 1990 -e 2001
+```
 ### Example 2: Generate IC from 1990 to 2001 in Johor:
-`python IC_generator_tool.py -s 1990 -e 2001 -pb JHR`
+```
+python IC_generator_tool.py -s 1990 -e 2001 -pb JHR
+```
 ### Example 3: Generate IC from 1990 to 2001 with custom 2-digit numbers:
-`python IC_generator_tool.py -s 1990 -e 2001 -pb 01,02,...`
+```
+python IC_generator_tool.py -s 1990 -e 2001 -pb 01,02,...
+```
 ### Example 4: Generate IC from 1990 to 2001 with male gender
-`python IC_generator_tool.py -s 1990 -e 2001 -g M`
+```
+python IC_generator_tool.py -s 1990 -e 2001 -g M
+```
 ### Example 5: Generate IC in 2003 who born in Kuala Lumpur or Selangor and is Male. -n will overwrite the default digits(5,6,7,0): 
-`python IC_generator_tool.py -s 2003 -e 2003 -pb KUL,SGR -n 0 -g M`
+```
+python IC_generator_tool.py -s 2003 -e 2003 -pb KUL,SGR -n 0 -g M
+```
 ![image](https://user-images.githubusercontent.com/11075969/121502432-c21f8600-ca12-11eb-936d-7550ad879bc4.png)
 
 ## For your information
@@ -51,13 +65,19 @@ The first six digits YYMMDD signify the person's date of birth in the ISO 8601:2
 | Federal Territory of Kuala Lumpur | KUL | 14, 54, 55, 56, 57 |
 | Federal Territory of Labuan | LBN | 15, 58 |
 | Federal Territory of Putrajaya | PJY | 16 |
+
 If `-pb` is not specify, it will generate all possible outcome. Proceed with caution as this will generate large numbers of lines.
+**Note:** `-pb` accept list of state abbrevations and list of PB codes (comma seperated). Mixed of state abbrevation and PB code is not allowed.
 
 ### The Ninth Digit (N)
 Usually, a person born prior and in the year 1999 will have the number started with 5## or 6## or 7## while a person born after and in the year 2000 will have the number started with 0##. This tool default will generate all possible digit (5,6,7,0) regardless of the year. Use `-n` arguement to overwrite this behaviour.
+**Note:** `-n` accept list of 1-digit integeter
 
 ### Gender (G)
 G, the last digit of the IC represents the gender of the person.
 Odd numbers (1,3,5,7,9) denote male
 Even numbers (2,4,6,9,0) denote female
 This tool generate all possible digit (0-9) by default. Use `-g` argument to overwrite this behaviour. 
+
+### Source
+https://en.wikipedia.org/wiki/Malaysian_identity_card
