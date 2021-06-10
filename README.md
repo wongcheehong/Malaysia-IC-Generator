@@ -1,4 +1,4 @@
-# Malaysia-IC-Generator
+# Malaysia IC Generator
 This is a tool to generate list of Malaysia IC with multiple flexible arguments to limit the scope. Useful for dictionary attack.
 
 ## Install
