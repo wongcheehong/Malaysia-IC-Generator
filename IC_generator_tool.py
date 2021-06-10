@@ -70,7 +70,6 @@ ap.add_argument("-pb", "--placebirth", required=False, help="Place of birth. Use
 ap.add_argument("-n", "--ninthdigit", required=False, metavar="[0-9]", help="For overwriting the default ninth digit (5, 6, 7, 0)", action=NinthDigit)
 ap.add_argument("-g", "--gender", required=False, choices=['F', 'M'], help="F for female, M for male (Usually even numbers denote femlae while odd numbers denote male). \nMissing <gender> will default generate all")
 args = vars(ap.parse_args())
-print(args)
 
 if args['endyear'] < args['startyear']:
     print("Error: End year should be larger than or equal to start year")
